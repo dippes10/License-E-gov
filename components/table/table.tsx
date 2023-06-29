@@ -3,7 +3,18 @@ import React from "react";
 import { Box } from "../styles/box";
 import { RenderCell } from "./render-cell";
 
-export const TableWrapper = ({ columns, data }) => {
+type Column = {
+  name: string;
+  uid: string;
+};
+
+export const TableWrapper = ({
+  columns,
+  data,
+}: {
+  columns: Column[];
+  data: any[];
+}) => {
   return (
     <Box
       css={{
@@ -26,11 +37,11 @@ export const TableWrapper = ({ columns, data }) => {
         <Table.Header columns={columns}>
           {(column) => (
             <Table.Column
-              key={column.uid}
-              hideHeader={column.uid === "actions"}
-              align={column.uid === "actions" ? "center" : "start"}
+              key={column?.uid}
+              hideHeader={column?.uid === "actions"}
+              align={column?.uid === "actions" ? "center" : "start"}
             >
-              {column.name}
+              {column?.name}
             </Table.Column>
           )}
         </Table.Header>
