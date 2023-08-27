@@ -20,9 +20,9 @@ export const CompaniesDropdown = () => {
   });
   return (
     <Dropdown
-      placement="bottom-right"
+      placement="bottom-left"
       borderWeight={"extrabold"}
-      isDisabled={true}
+      isDisabled={false}
     >
       <Dropdown.Trigger css={{ cursor: "pointer" }}>
         <Box>
@@ -35,7 +35,7 @@ export const CompaniesDropdown = () => {
                 weight={"medium"}
                 css={{
                   m: 0,
-                  color: "$accents9",
+                  color: "#003A9D",
                   lineHeight: "$lg",
                   mb: "-$5",
                 }}
@@ -46,7 +46,7 @@ export const CompaniesDropdown = () => {
                 span
                 weight={"medium"}
                 size={"$xs"}
-                css={{ color: "$accents8" }}
+                css={{ color: "$#C40001" }}
               >
                 {company.location}
               </Text>
@@ -60,21 +60,21 @@ export const CompaniesDropdown = () => {
           if (e === "1") {
             setCompany({
               name: "Facebook",
-              location: "San Fransico, CA",
+              location: "Pepsicola, Kathmandu",
               logo: <AcmeIcon />,
             });
           }
           if (e === "2") {
             setCompany({
               name: "Instagram",
-              location: "Austin, Tx",
+              location: "Swoyambhu, Kathmandu",
               logo: <AcmeLogo />,
             });
           }
           if (e === "3") {
             setCompany({
               name: "Twitter",
-              location: "Brooklyn, NY",
+              location: "Sirak ko Ghar, Kathmandu",
               logo: <AcmeIcon />,
             });
           }
@@ -94,7 +94,7 @@ export const CompaniesDropdown = () => {
             py: "$2",
             // dropdown item left icon
             svg: {
-              color: "$secondary",
+              color: "#C40001",
               mr: "$4",
             },
             // dropdown item title
@@ -109,20 +109,20 @@ export const CompaniesDropdown = () => {
           <Dropdown.Item
             key="1"
             icon={<AcmeIcon />}
-            description="San Fransico, CA"
+            description="Gothatar, Kathmandu"
           >
             Facebook
           </Dropdown.Item>
-          <Dropdown.Item key="2" icon={<AcmeLogo />} description="Austin, Tx">
+          <Dropdown.Item key="2" icon={<AcmeLogo />} description="Swoyambhu, Kathmandu">
             Instagram
           </Dropdown.Item>
-          <Dropdown.Item key="3" icon={<AcmeIcon />} description="Brooklyn, NY">
+          <Dropdown.Item key="3" icon={<AcmeIcon />} description="Nepal">
             Twitter
           </Dropdown.Item>
           <Dropdown.Item
             key="4"
             icon={<AcmeIcon />}
-            description="Palo Alto, CA"
+            description="Sirak ko Ghar"
           >
             Acme Co.
           </Dropdown.Item>

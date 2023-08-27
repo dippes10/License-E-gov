@@ -26,7 +26,7 @@ export const MyProfile = () => {
     ward: "Ward No.8",
   });
 
-  const handleChange = (event) => {
+  const handleChange = (event: { target: { name: any; value: any; }; }) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
